@@ -1,0 +1,117 @@
+/* RESET */
+body, h1, h2, p, ul {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #fafafa;
+  line-height: 1.6;
+}
+
+/* HEADER (fixed at top) */
+#header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex; /* FLEXBOX REQUIREMENT */
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 30px;
+  background: white;
+  border-bottom: 2px solid #ddd;
+  z-index: 1000;
+}
+
+#header-img {
+  width: 60px;
+}
+
+/* NAV BAR */
+#nav-bar {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+.nav-link:hover {
+  color: #0073e6;
+}
+
+/* CONTENT SECTIONS */
+main {
+  padding-top: 120px; /* Prevent content hiding behind navbar */
+  width: 90%;
+  max-width: 900px;
+  margin: auto;
+}
+
+section {
+  margin: 60px 0;
+}
+
+/* PRICING SECTION */
+.pricing-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.price-card {
+  background: #fff;
+  padding: 20px;
+  border: 2px solid #ddd;
+  flex: 1;
+  margin: 0 10px;
+  text-align: center;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+/* FORM */
+#form {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+}
+
+#email, #submit {
+  padding: 10px;
+  margin: 10px 0;
+  font-size: 1rem;
+}
+
+#submit {
+  background: #0073e6;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+#submit:hover {
+  background: #005bb5;
+}
+
+/* MEDIA QUERY REQUIREMENT */
+@media (max-width: 650px) {
+  #nav-bar {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .pricing-container {
+    flex-direction: column;
+  }
+
+  .price-card {
+    margin: 10px 0;
+  }
+}
